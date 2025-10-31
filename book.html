@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk to an Expert</title>
+</head>
+<style>
+      body {
+  background-color:#042630;
+  margin: 0;
+}
+.nav img{
+    height: 9vh;
+    width: 13vw;
+    margin-right: 35vw;
+}
+.nav{
+    display: flex;
+    margin-top: 2vh;
+     background-color:#042630;
+}
+.nav-options {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    gap: 3vw;
+    font-size: 20px;
+    margin-top: 2vh;
+}
+.nav-options button{
+    height: 8vh;
+    width: 12vw;
+    margin-top: 0;
+    background-color: #f76c34;
+}
+
+.contact{
+    color: white;
+    justify-self: center;
+    font-size: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+/* The main container */
+        .call-section {
+            display: flex;
+            flex-wrap: wrap; /* Allows columns to stack on small screens */
+            gap: 40px;
+            width: 100%;
+            max-width: 1100px;
+            background-color: #0a2a36; /* Dark teal background */
+            color: #e0e0e0; /* Light text color for contrast */
+            padding: 60px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        /* Left column content */
+        .call-content {
+            flex: 2; /* Takes up 2/3 of the space */
+            min-width: 300px; /* Ensures content doesn't get too squished */
+        }
+
+        .call-content h2 {
+            color: #ffffff;
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .call-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .call-content li {
+            display: flex;
+            align-items: flex-start; /* Aligns checkmark with the top of the text */
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .call-content .icon {
+            font-size: 28px;
+            color: #34d399; /* A bright checkmark color */
+            line-height: 1; /* Aligns checkmark better */
+        }
+
+        .call-content li strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Right column form */
+        .call-form {
+            flex: 1; /* Takes up 1/3 of the space */
+            min-width: 280px;
+            width: 20vw;
+        }
+
+        .call-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .call-form label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .call-form input[type="email"] {
+            padding: 12px 15px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .call-form button {
+            background-color: #ec591e; 
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-self: flex-start; 
+        }
+
+        .call-form button:hover {
+            background-color: #5a6c7d;
+        }
+
+.brands{
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+.brand-text{
+    color: white;
+    justify-self: center;
+    font-size: 8vh;
+}
+.brand-img{
+    display: flex;
+    overflow:scroll;
+    gap: 5vw;
+    padding: 20px;
+    /* scrollbar-width: 0; */
+}
+.brand-img img{
+    height: 15vh;
+}
+
+  .footer-section {
+    background-color: #042630 ; 
+    padding: 60px 80px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    color: #aebecd; 
+    font-size: 15px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 40px; 
+}
+
+.logo-placeholder {
+    width: 15vw;
+    height: 10vh;
+    background-color: transparent;
+    margin-bottom: 25px;
+   
+}
+
+.copyright {
+    margin-bottom: 25px;
+    color: #aebecd;
+}
+
+.app-store-badge img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.footer-right {
+    display: flex;
+    gap: 80px; 
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h4 {
+    color: #ffffff; 
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #aebecd; 
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-column ul li a:hover {
+    color: #cce7f5;
+}
+
+@media (max-width: 992px) {
+    .footer-section {
+        padding: 40px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left {
+        margin-right: 0;
+        margin-bottom: 40px;
+        align-items: center;
+    }
+
+    .footer-right {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .footer-column {
+        min-width: 150px; 
+    }
+
+    .footer-column h4 {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-section {
+        padding: 30px 20px;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+<body>
+     <div class="nav">
+        <img src="https://blstimes.com/wp-content/uploads/2024/06/AcuityMD.png" alt="">
+        <div class="nav-options">
+        <div>Platform</div>
+        <div>Solutions</div>
+        <div>Resources</div>
+        <div>About</div>
+        <div>Login</div>
+        <div><button>Contact us</button></div>
+        </div>
+    </div>
+    <div class="contact">Speak with a MedTech Expert</div>
+
+   <div class="call-section">
+        
+        <div class="call-content">
+            <h2>Here's what we'll cover on our call:</h2>
+            <ul>
+                <li>
+                    <span class="icon">✔</span>
+                    <div>
+                        <strong>Learn About Your Business:</strong> We'll take the time to understand your unique goals and specialty.
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">✔</span>
+                    <div>
+                        <strong>Identify Key Challenges:</strong> Share your biggest pain points, and we'll align on how to solve them together.
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">✔</span>
+                    <div>
+                        <strong>Build a Tailored Roadmap:</strong> We'll map out a clear path to help you drive revenue and achieve success.
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="call-form">
+            <form action="#" method="POST">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+          
+    </div>
+    </div>
+    <div class="brands">
+        <div class="brand-text">Our Customer Include</div>
+        <div class="brand-img">
+            <img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/664276afdb5cf0f2a8502679_53e1773439fa9278fad461421454daca_bolt.svg" alt="">
+
+            <img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/664274745a54aec565956642_3b908dd0adf879fa7421298bcd79e058_femselect.svg" alt="">
+
+            <img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/67d2070890c244aa7d6e8e4a_48e937edcdd12adb62eeec32c8461381_bd.svg" alt="">
+
+            <img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/67d30bc9b8406c7b087cf278_6f544c5df537570ce35a9e7988d9c62f_providence.svg" alt="">
+
+            <img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/66427576d9c37f592b0267e2_bf59879ba7dc7cd6fe012c1e152489e1_pristine.svg" alt="">
+
+            <img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/67d2079302a845531f7f2041_6b729ce2837c8d1e01bc1852cebb26fa_merit.svg" alt="">
+        </div>
+    </div>
+
+    
+<footer class="footer-section">
+        <div class="footer-left">
+            <img class="logo-placeholder" src="https://blstimes.com/wp-content/uploads/2024/06/AcuityMD.png">
+        </img>
+            <p class="copyright">&copy; 2025 AcuityMD, Inc. All rights reserved.</p>
+            <a href="#" class="app-store-badge">
+                <img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/67a507ddef8534afe55fcb10_app-store.svg" alt="Download on the App Store">
+            </a>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">Care Journeys</a></li>
+                    <li><a href="#">Contracts</a></li>
+                    <li><a href="#">Targeting</a></li>
+                    <li><a href="#">Pipeline</a></li>
+                    <li><a href="#">Markets</a></li>
+                    <li><a href="#">Territories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Customer Stories</a></li>
+                    <li><a href="#">Flywheel</a></li>
+                    <li><a href="#">In the News</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">Webinars</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Statement on Job Scams</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">COPPA Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

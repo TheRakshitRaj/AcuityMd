@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/1397252166507761664/8jJ6yoxQ_400x400.png" type="image/x-icon">
+</head>
+<style>
+   body {
+  background-color:#042630;
+  margin: 0;
+}
+.nav img{
+    height: 9vh;
+    width: 13vw;
+    margin-right: 35vw;
+}
+.nav{
+    display: flex;
+    /* margin-top: 2vh; */
+     background-color:#042630;
+}
+.nav-options {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    gap: 3vw;
+    font-size: 20px;
+    margin-top: 2vh;
+}
+.nav-options button{
+    height: 8vh;
+    width: 12vw;
+    margin-top: 0;
+    background-color: rgb(231, 94, 26);
+}
+.bulb{
+    justify-self: center;
+    align-self: center;
+    margin-top: 5vh;
+}
+.bulb img{
+    height: 10vh;
+}
+.guess{
+    color: white;
+    justify-self: center;
+    font-size: 9vh;
+    margin-top: 8vh;
+}
+.small{
+    color: white;
+    font-size: x-large;
+    justify-self: center; 
+    margin-top: 3vh;
+}
+.info{
+    display: flex;
+    margin-top: 12vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    gap: 1vw;
+}
+.text-info{
+    color: #fff;
+    margin-top: 30vh;
+    font-size: 2vh;
+}
+.pdf{
+    display: flex;
+    margin-top: 2vh;
+    justify-self: center;
+    padding: 8vh;
+}
+.btn{
+    /* margin-top: 4vh; */
+    justify-self: center;
+    margin-left: 5vw;
+}
+.btn button{
+    height: 8vh;
+    width: 15vw;
+    font-size: 20px;
+    background-color: rgb(251, 73, 9);
+    transition: 0.3s ease-in;
+    border-radius: 10px;
+}
+.btn button:hover{
+    background-color: rgb(2, 133, 198);
+}
+.white{
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10vh;
+    padding: 3vw;
+}
+.card{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+     padding: 10px;
+    transition: 0.5s ease-in;
+}
+.card:hover{
+    background-color:#042630 ;
+    color: white;
+}
+.card-flow{
+    display: flex;
+    gap: 2.4vw;
+     scrollbar-width: none;
+     padding: 10px;
+     animation:  scrollStep 15s linear infinite;
+
+
+
+}
+
+.card-img img{
+    height: 40vh;
+   right: 0;
+}
+  @keyframes scrollStep {
+    0%, 10%   { transform: translateX(0); }
+    20%, 30%  { transform: translateX(-270px); }
+    40%, 50%  { transform: translateX(-540px); }
+    60%, 70%  { transform: translateX(-810px); }
+    80%, 90%  { transform: translateX(-1080px); }
+    100%      { transform: translateX(0); }
+  }
+
+  .footer-section {
+    background-color: #042630 ; 
+    padding: 60px 80px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    color: #aebecd; 
+    font-size: 15px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 40px; 
+}
+
+.logo-placeholder {
+    width: 15vw;
+    height: 10vh;
+    background-color: transparent;
+    margin-bottom: 25px;
+   
+}
+
+.copyright {
+    margin-bottom: 25px;
+    color: #aebecd;
+}
+
+.app-store-badge img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.footer-right {
+    display: flex;
+    gap: 80px; 
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h4 {
+    color: #ffffff; 
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #aebecd; 
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-column ul li a:hover {
+    color: #cce7f5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .footer-section {
+        padding: 40px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left {
+        margin-right: 0;
+        margin-bottom: 40px;
+        align-items: center;
+    }
+
+    .footer-right {
+        flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .footer-column {
+        min-width: 150px; /* Ensure columns have a minimum width */
+    }
+
+    .footer-column h4 {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-section {
+        padding: 30px 20px;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
+<body>
+    <div class="nav">
+        <img src="https://blstimes.com/wp-content/uploads/2024/06/AcuityMD.png" alt="">
+        <div class="nav-options">
+        <div>Platform</div>
+        <div>Solutions</div>
+        <div>Resources</div>
+        <div>About</div>
+        <div>Login</div>
+        <a href="/contact.html"><button>Contact us</button></a>
+        </div>
+    </div>
+
+    <div class="bulb"><img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/66fd7557c30c626399174442_pipeline.svg" alt=""></div>
+
+    <div class="guess">Take the guesswork out of your pleline
+</div>
+<div class="small">Set your sales cycle in motion and consistently deliver on revenue goals.</div>
+
+<div class="info">
+    <div class="text-info"><h1>Execute on the highest-value opportunities</h1><p>Automatically populate your pipeline with high-value HCP and Site of Care targets. AcuityMD pulls in all relevant information for you – like procedure volume, HCP details, and more – so reps can easily manage opportunities throughout the sales cycle and identify untapped opportunities.</p></div>
+    <img class="img-info" src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/65f4b69d2185a3329417e731_pipeline-route.svg"></img>
+</div>
+
+<div class="info">
+     <img class="img-info" src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/68239cd33a0bcd1d76ab1469_estimated-sales-calculator.svg"></img>
+
+    <div class="text-info"><h1>Forecast with greater accuracy to close gaps-to-quota</h1><p>Build precise sales forecasts, identify gap-to-quota, and guide reps on how to best fill their pipeline. AcuityMD supports the nuanced relationship between HCP, product, and Site of Care so you can track multiple opportunities for the same HCP. As reps move prospects through the sales cycle, they can continuously monitor progress towards quota and quickly close any gaps with fresh targets.</p></div>
+   
+</div>
+
+
+<div class="info">
+    <div class="text-info"><h1>See a complete view of your sales cycle</h1><p>Manage the end-to-end MedTech commercial process in one place - from initial targeting to customer. AcuityMD automatically builds and maintains a list of product users as you win opportunities, and provides visibility into pipeline for different customer types (HCPs, Sites of Care) as well as for single-use, capital, and reusable products.</p></div>
+    <img class="img-info" src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/65f4b601320cd11800e6528b_manage-pipeline.svg"></img>
+</div><br><hr>
+
+<div class="pdf">
+    <a href="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/67082fca866ed10c826b09b2_pipeline.pdf"><img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/67082f958bc24fa30a2cd4ae_pipeline-brief.svg" alt=""></a>
+
+    <a class="btn" href="./book.html"><button>Talk to an Expert</button></a>
+
+</div>
+
+<div class="white">
+    <img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/688a60e485a0d261726b122d_orange-bar.svg" alt="">
+    <h1>See more products</h1>
+    <div class="card-flow">
+        <div class="card">
+            <p>MARKSTS</p>
+            <h1>Size your market</h1>
+            <div class="card-img"><img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/688b75f25a82c4f5e3a3e467_market-hp.svg" alt=""></div>
+        </div>
+
+        <div class="card">
+            <p>TARGETING</p>
+            <h1>Identifies high-value prospects</h1>
+            <div class="card-img"><img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/688b6d8346f215eeedc6e119_targeting-hp.svg" alt=""></div>
+        </div>
+
+        <div class="card">
+            <p>TERRITORIES</p>
+            <h1>Align your sales team</h1>
+            <div class="card-img"><img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/688b7117ad93e0cc4a0d1b35_territory-hp.svg" alt=""></div>
+        </div>
+
+        <div class="card">
+            <p>CONTRACTS</p>
+            <h1>Surface on-contract oppertunities</h1>
+            <div class="card-img"><img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/688b6d8346f215eeedc6e119_targeting-hp.svg" alt=""></div>
+        </div>
+
+        <div class="card">
+            <p>CARE JOURNEYS</p>
+            <h1>Uncover referral pathways</h1>
+            <div class="card-img"><img src="https://cdn.prod.website-files.com/65b1843db29b618465c2baa3/688b7864fcdc45959028b32f_care-journey.png" alt=""></div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer-section">
+        <div class="footer-left">
+            <img class="logo-placeholder" src="https://blstimes.com/wp-content/uploads/2024/06/AcuityMD.png">
+        </img>
+            <p class="copyright">&copy; 2025 AcuityMD, Inc. All rights reserved.</p>
+            <a href="#" class="app-store-badge">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">Care Journeys</a></li>
+                    <li><a href="#">Contracts</a></li>
+                    <li><a href="#">Targeting</a></li>
+                    <li><a href="#">Pipeline</a></li>
+                    <li><a href="#">Markets</a></li>
+                    <li><a href="#">Territories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Customer Stories</a></li>
+                    <li><a href="#">Flywheel</a></li>
+                    <li><a href="#">In the News</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">Webinars</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Statement on Job Scams</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">COPPA Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
